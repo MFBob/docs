@@ -1,0 +1,87 @@
+Delivered-To: matthewjrmccarlj@gmail.com
+Received: by 2002:a02:ac81:0:b0:473:e9c1:484f with SMTP id x1csp1273128jan;
+        Mon, 19 Feb 2024 07:43:17 -0800 (PST)
+X-Received: by 2002:a05:6102:3a08:b0:46e:c4be:ddc4 with SMTP id b8-20020a0561023a0800b0046ec4beddc4mr11560009vsu.26.1708357397331;
+        Mon, 19 Feb 2024 07:43:17 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1708357397; cv=none;
+        d=google.com; s=arc-20160816;
+        b=WB7GfMezA7Ks9ghS/9xqp5bUl4enysWHcDxd3NseGFw5e05bJGRu7YGaLXYrVNu6ZO
+         pNjRACs415CF3cjR2ecdoygyYDaE1tNSfMb6HMYBL9VewuPzdcdWKMHCqqydAXb2yUZV
+         sRccJhB8V8Vtf/pg6UX6lOU/w/UcuU5cU77sW7CPCZ9cCEtWqHFLO7H7vsj+kf6jOPo9
+         IOOyhCPl9Me2jQPeH68hKF90QFLbrCdyYO8ClfQEfxfNFoBUvtR+nbCpJMj6S18s4lFI
+         vVKLgY48W14mWGGbO9rwrOLcnV31qbc5JlFY/95XZiBiqjJNgOyKP5ueUO8/xXTMaFFW
+         siuQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=4R1gRo4IQ6d9CxiX8frBJS1IeJsmp6NMLCYgvXiBgmM=;
+        fh=2WQQCXHHn4dyLLFhGoyngeWUR5E6KNwMlTwErwGhR1A=;
+        b=gzihkbNoz8nqGJm4je8/E3GeEgLOgrSk1POx/YpJkYxbRki5YpT8m344mENx53B8cA
+         3mX201XQ9EtjPcTLpvtyC3v6Q6FIhVK+SxmP8ymsUtu4j/ijjyj+M13e3gKVEpZdV/P6
+         FfxvOSRuRHD3INU6++NH9ULspuq9U3zXSFRJf7k6+RnLsyywgTR6Ca0QZYf31iBEgjLR
+         qQ3d+M/o6GQxsKH4FhlpnfI+WKJHZQ05YRF3I5aCpx5IrWOubOZfG46TIzT/Dh7RdoND
+         F3tO9Y8wUzYLWdekke5+sGBad2lJGYh6ZNp8qwkQFNzBXmYPEnahFNF5tKTveK7qnK9i
+         bOcw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=UdAwansD;
+       spf=pass (google.com: domain of madisontaylor171992@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=madisontaylor171992@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <madisontaylor171992@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id p3-20020a67f303000000b0047043a50ef8sor970219vsf.6.2024.02.19.07.43.17
+        for <matthewjrmccarlj@gmail.com>
+        (Google Transport Security);
+        Mon, 19 Feb 2024 07:43:17 -0800 (PST)
+Received-SPF: pass (google.com: domain of madisontaylor171992@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=UdAwansD;
+       spf=pass (google.com: domain of madisontaylor171992@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=madisontaylor171992@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1708357396; x=1708962196; dara=google.com;
+        h=to:subject:message-id:date:from:mime-version:from:to:cc:subject
+         :date:message-id:reply-to;
+        bh=4R1gRo4IQ6d9CxiX8frBJS1IeJsmp6NMLCYgvXiBgmM=;
+        b=UdAwansDZRiZ7O8UBGBVZvQi0UmODHVQP/jqKogPIE4+wHlps6cuMAV9cn6Zyo4sOd
+         JxknNhiqr9xH+tsACXNlc7ksHyPPJM1b3WlF+nBkEPCiJRsRJiOGVkub23nFX5LWT8Tp
+         O98IB32GtrpvPswVI7Hys5BmmLPrci10/Lr5JkKafVyjoScKaFupNDirC+BYIdLFhn+X
+         YCAuf41jnwM9MitinjeaalFq/+LOCl9zDC/j7wp3ezuZpSYdjYxXf6IfSmCSeSyi2say
+         d6pBzwmGFOzkz+kO1InHt9sMW2zFle8QyvjduQIkxNBTQS5/YTzpzipc80u//Om7JA+z
+         tyJA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1708357396; x=1708962196;
+        h=to:subject:message-id:date:from:mime-version:x-gm-message-state
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=4R1gRo4IQ6d9CxiX8frBJS1IeJsmp6NMLCYgvXiBgmM=;
+        b=Sz4IkmrKYSiKn9HjwDAp5brDNKbfsvw64lPWJgp/j9+T8NDl1Oyj8rt6fZHvjyg+9+
+         GED0yKNMrFiP5wMb0nBcIfNlv02VMGk0motw4FCJ8V1VzuCAPLduh1DECsP2hu/VoAqr
+         NIX1KdlSmq1sjvZDqeD6eBWsm3azwmNdsY9wDkC9oT7GmYYujVPlPN1r9gBnsAiV134A
+         lQV+wZDUmG64Dl2Ozuxc6pk4eqhq5lKh2dJn+ujMAGYE2/dGWGf61HX2R/5DokST0vGO
+         jF5EcQkX9cl2nU+ii8hnVKRrM0SXxRMRA+0hIdMswMj7x046lkDw0g339kn4xNV2qutA
+         Ni+Q==
+X-Gm-Message-State: AOJu0YxbQFA6EWYXHbzVzafC9fsdAluQFAdPjJ/jz6RJbNH+Aer+Nu9v
+	i4TzSPpura9gEUSOSQ042nqAInIRqRuDzfluUhQqTsiiL3c4lCxMueE/f+X44NPkBUHeA6lgxjC
+	AJb98uDltslNaUL/QlwDVcQl/Hu6zu38tx7o=
+X-Google-Smtp-Source: AGHT+IFy4iwrF+csZHh/S1i059zddCuuZe2AIMTJKaJAiTW/86xa1nJFPxoRs1TJddds6HBXmeHLjdQHl8nPvMOE/+k=
+X-Received: by 2002:a67:fb85:0:b0:470:432b:e2c4 with SMTP id
+ n5-20020a67fb85000000b00470432be2c4mr3318754vsr.28.1708357396594; Mon, 19 Feb
+ 2024 07:43:16 -0800 (PST)
+MIME-Version: 1.0
+From: Madison Taylor <madisontaylor171992@gmail.com>
+Date: Mon, 19 Feb 2024 07:43:03 -0800
+Message-ID: <CABoBVvZJzhRFsik45K=L+NSqJtDRRSOO4b95bqXpmXi1gNA71w@mail.gmail.com>
+Subject: 
+To: matthewjrmccarlj@gmail.com
+Content-Type: multipart/alternative; boundary="000000000000c609e10611bdf3e6"
+
+--000000000000c609e10611bdf3e6
+Content-Type: text/plain; charset="UTF-8"
+
+
+
+--000000000000c609e10611bdf3e6
+Content-Type: text/html; charset="UTF-8"
+
+<div dir="auto"></div>
+
+--000000000000c609e10611bdf3e6--
